@@ -8,7 +8,7 @@ describe('Age', () => {
   });
   test('should correctly convert the age for any planet in our solar system', () => {
     const age = new GalacticAge("7/25/1969");
-    age.getSolarAge(); 
+    age.getSolarAge();
     expect(age.getPlanetAge("Mars")).toEqual(27.9)
   })
 
