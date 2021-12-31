@@ -12,11 +12,22 @@ export default class GalacticAge {
     this.solarAge = (diff / (1000*60*60*24*365.25));
     // round to make results predictable for testing
     this.solarAge = Math.round(this.solarAge * 10) / 10;
-    console.log(this.solarAge);
     return Math.floor(this.solarAge)
   }
 
   getPlanetAge = (planet) => {
-    return("don't know");
+    switch(planet) {
+      case "Mercury": return (this.adjustAge(.24));
+      case "Venus": return (this.adjustAge(.62));
+      case "Mars": return (this.adjustAge(1.88));
+      case "Jupiter": return (this.adjustAge(11.86));
+      default: return this.solarAge;
+    }
   };
+
+  adjustAge = (factor) => {
+    const newAge = this.solarAge/factor;
+    console.log(newAge);
+    return Math.round(newAge * 10) / 10;
+  }
 };
