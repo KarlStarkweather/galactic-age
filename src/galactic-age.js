@@ -4,7 +4,7 @@ export default class GalacticAge {
     this.solarAge = 0;
   };
 
-  const getAge = (planet) => {
+  getAge = (planet) => {
     return("don't know");
   };
 };
