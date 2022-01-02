@@ -1,7 +1,7 @@
 # Galactic Age Calculator
 
 ## By Karl Starkweather
-This project contains object methods to calculate ages on various planets (within our solar system) based on the rotational "year" of those planets. It also calculates life expectancy converted to those planetary years based on current US average life expectancy.
+This project contains object methods to calculate ages on various planets (within our solar system) based on the rotational "year" of those planets. It also calculates life expectancy converted to those planetary years based on current US average life expectancy. All values for ages are rounded to 1/10th of a year.
 
 ## Technologies used:
 * Javascript
