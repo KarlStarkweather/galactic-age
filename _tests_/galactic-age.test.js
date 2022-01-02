@@ -11,8 +11,8 @@ describe('Age', () => {
     age.getSolarAge();
     expect(age.getPlanetAge("Mars")).toEqual(27.9)
   })
-  test('should correctly calculate the users life expectancy on a given planet', () => {
+  test('should correctly calculate the users remaining life expectancy on a given planet', () => {
     const age = new GalacticAge("7/25/1969");
-    expect(age.expectedYears("Mars")).toEqual(14.8)
+    expect(age.expectedYears("Mars")).toEqual(14.5)
   })
 });

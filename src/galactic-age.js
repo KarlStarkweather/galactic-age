@@ -26,8 +26,11 @@ export default class GalacticAge {
     }
   };
 
-  yearsExpected = (planet) => {
-    return 0;
+  expectedYears = (planet) => {
+    const expected = new GalacticAge(Date.now());
+    expected.solarAge = this.lifeExpectancy;
+    this.getSolarAge();
+    return (expected.getPlanetAge(planet) - this.getPlanetAge(planet));
   };
 
   adjustAge = (factor) => {
