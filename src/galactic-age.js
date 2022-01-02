@@ -1,3 +1,7 @@
+function round(num) {
+  return Math.round(num * 10) / 10;
+}
+
 export default class GalacticAge {
 
   constructor(birthDate) {
@@ -11,7 +15,7 @@ export default class GalacticAge {
     const d2 = new Date(Date.now());
     const diff = d2.getTime() - d1.getTime();
     this.earthAge = (diff / (1000*60*60*24*365.25));
-    this.earthAge = Math.round(this.earthAge * 10) / 10;
+    this.earthAge = round(this.earthAge);
     return this.earthAge;
   }
 
@@ -29,11 +33,11 @@ export default class GalacticAge {
     const expected = new GalacticAge();
     expected.earthAge = this.lifeExpectancy;
     this.getEarthAge();
-    return (expected.getPlanetAge(planet) - this.getPlanetAge(planet));
+    return round(this.getPlanetAge(planet) - expected.getPlanetAge(planet));
   };
 
   adjustAge = (factor) => {
     const newAge = this.earthAge/factor;
-    return Math.round(newAge * 10) / 10;
+    return round(newAge);
   }
 };
