@@ -11,9 +11,8 @@ export default class GalacticAge {
     const d2 = new Date(Date.now());
     const diff = d2.getTime() - d1.getTime();
     this.earthAge = (diff / (1000*60*60*24*365.25));
-    // round to make results more predictable for testing
     this.earthAge = Math.round(this.earthAge * 10) / 10;
-    return Math.floor(this.earthAge)
+    return this.earthAge;
   }
 
   getPlanetAge = (planet) => {

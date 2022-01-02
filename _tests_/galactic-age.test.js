@@ -4,7 +4,7 @@ describe('Age', () => {
 
   test('should correctly calculate standard age from a birthdate', () => {
     const age = new GalacticAge("7/25/1969");
-    expect(age.getEarthAge()).toEqual(52);
+    expect(age.getEarthAge()).toEqual(52.4);
   });
   test('should correctly convert the age for any planet in our earth system', () => {
     const age = new GalacticAge("7/25/1969");
