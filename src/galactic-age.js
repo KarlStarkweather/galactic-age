@@ -3,6 +3,7 @@ export default class GalacticAge {
   constructor(birthDate) {
     this.birthDate = birthDate;
     this.solarAge = 0;
+    this.lifeExpectancy = 79.8;
   };
 
   getSolarAge= () => {
@@ -25,9 +26,12 @@ export default class GalacticAge {
     }
   };
 
+  yearsExpected = (planet) => {
+    return 0;
+  };
+
   adjustAge = (factor) => {
     const newAge = this.solarAge/factor;
-    console.log(newAge);
     return Math.round(newAge * 10) / 10;
   }
 };
