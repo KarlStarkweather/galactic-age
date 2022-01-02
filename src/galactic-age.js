@@ -2,18 +2,18 @@ export default class GalacticAge {
 
   constructor(birthDate) {
     this.birthDate = birthDate;
-    this.solarAge = 0;
+    this.earthAge = 0;
     this.lifeExpectancy = 79.8;
   };
 
-  getSolarAge= () => {
+  getEarthAge= () => {
     const d1 = new Date(this.birthDate);
     const d2 = new Date(Date.now());
     const diff = d2.getTime() - d1.getTime();
-    this.solarAge = (diff / (1000*60*60*24*365.25));
-    // round to make results predictable for testing
-    this.solarAge = Math.round(this.solarAge * 10) / 10;
-    return Math.floor(this.solarAge)
+    this.earthAge = (diff / (1000*60*60*24*365.25));
+    // round to make results more predictable for testing
+    this.earthAge = Math.round(this.earthAge * 10) / 10;
+    return Math.floor(this.earthAge)
   }
 
   getPlanetAge = (planet) => {
@@ -22,19 +22,19 @@ export default class GalacticAge {
       case "Venus": return (this.adjustAge(.62));
       case "Mars": return (this.adjustAge(1.88));
       case "Jupiter": return (this.adjustAge(11.86));
-      default: return this.solarAge;
+      default: return this.earthAge;
     }
   };
 
-  expectedYears = (planet) => {
-    const expected = new GalacticAge(Date.now());
-    expected.solarAge = this.lifeExpectancy;
-    this.getSolarAge();
+  expectedYearsRemaining = (planet) => {
+    const expected = new GalacticAge();
+    expected.earthAge = this.lifeExpectancy;
+    this.getEarthAge();
     return (expected.getPlanetAge(planet) - this.getPlanetAge(planet));
   };
 
   adjustAge = (factor) => {
-    const newAge = this.solarAge/factor;
+    const newAge = this.earthAge/factor;
     return Math.round(newAge * 10) / 10;
   }
 };
