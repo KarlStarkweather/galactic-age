@@ -29,6 +29,6 @@ describe('Age', () => {
   })
   test('should return the users age on Earth is a planet outside of the parameters is entered', () => {
     const age = new GalacticAge("7/25/1969");
-    expect(age.expectedYearsRemaining("Pluto")).toEqual(-14.5)
+    expect(age.expectedYearsRemaining("Pluto")).toEqual(-27.3)
   })
 });
