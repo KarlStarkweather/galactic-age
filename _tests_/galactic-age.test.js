@@ -33,6 +33,6 @@ describe('Age', () => {
   })
   test('should correctly calculate the users remaining life expectancy on Mercury', () => {
     const age = new GalacticAge("7/25/1969");
-    expect(age.expectedYearsRemaining("Mercury")).toEqual(-2.3)
+    expect(age.expectedYearsRemaining("Mercury")).toEqual(-113.7)
   })
 });
