@@ -23,5 +23,8 @@ describe('Age', () => {
     const age = new GalacticAge("7/25/1969");
     expect(age.expectedYearsRemaining("Venus")).toEqual(-44)
   })
-
+  test('should correctly calculate the users remaining life expectancy on Jupiter', () => {
+    const age = new GalacticAge("7/25/1969");
+    expect(age.expectedYearsRemaining("Jupiter")).toEqual(-14.5)
+  })
 });
