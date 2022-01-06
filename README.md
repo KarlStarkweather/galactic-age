@@ -10,7 +10,12 @@ This project contains object methods to calculate ages on various planets (withi
 
 ## Setup Instructions
 Clone directory from repository at https://github.com/KarlStarkweather/galactic-age
-run tests located in _tests_/ using npm commands
+at a terminal from the root directory of the project, enter:
+'npm install'
+then when completed enter:
+'npm run build'
+and finally:
+'npm test'
 
 ## known bugs:
 Because tests use fixed dates to calculate ages, they will begin to fail with the passage of time as expected values change
