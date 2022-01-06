@@ -17,7 +17,7 @@ describe('Age', () => {
   })
   test('should calculate remaining life expectancy on a given planet as a positive number if user has exceeded it', () => {
     const age = new GalacticAge("1/1/1922");
-    expect(age.expectedYearsRemaining("Mars")).toEqual(84.2)
+    expect(age.expectedYearsRemaining("Mars")).toEqual(10.8)
   })
   
 
